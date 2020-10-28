@@ -15,4 +15,4 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.REG_FORM), "REG link is not presented"
 
     def should_be_login_url(self):
-        assert "http://selenium1py.pythonanywhere.com/en-gb/accounts/logn/" in self.browser.current_url, "ннихуя"
+        assert "http://selenium1py.pythonanywhere.com/en-gb/accounts/logn/" in self.browser.current_url, "ничего"
