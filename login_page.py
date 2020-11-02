@@ -1,5 +1,11 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
+from .locators import Reg_New_User
+import faker
+f = faker.Faker()
+email = f.email()
+
+
 
 class LoginPage(BasePage):
     def should_be_login_page(self):
@@ -16,3 +22,13 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         assert "http://selenium1py.pythonanywhere.com/en-gb/accounts/logn/" in self.browser.current_url, "ничего"
+
+
+    def register_new_user(self,email,password):
+        email = self.browser.find_element(*Reg_New_User.email).send_keys(email)
+        password = self.browser.find_element(*Reg_New_User.password).send_keys(password)
+
+
+
+
+
